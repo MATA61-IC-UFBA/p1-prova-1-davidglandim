@@ -51,7 +51,7 @@ stmt
 ;
 
 exprlist
-: expr "," expr
+: expr ',' expr
 | expr
 
 expr
