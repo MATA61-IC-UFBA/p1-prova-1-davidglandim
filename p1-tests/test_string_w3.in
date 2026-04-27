@@ -1,0 +1,11 @@
+// test_string concat
+
+nome = "Joao"
+
+sobrenome = "Silva"
+
+nome_completo = concat nome, " ", sobrenome)
+
+print(nome_completo)
+
+

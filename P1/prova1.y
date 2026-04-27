@@ -45,14 +45,13 @@ stmt_list
 stmt
 : IDT ATRIBUICAO expr
 | PRINTT ABREP exprlist FECHAP
-| CONCATT ABREP exprlist FECHAP
-| LENGTHT ABREP expr FECHAP
 | expr
 ;
 
 exprlist
-: expr ',' expr
+: exprlist ',' expr
 | expr
+;
 
 expr
 : expr PLUS expr
@@ -60,10 +59,11 @@ expr
 | expr TIMES expr
 | expr DIV expr
 | ABREP expr FECHAP
+| CONCATT ABREP exprlist FECHAP
+| LENGTHT ABREP expr FECHAP
 | STRINGT
 | IDT
 | NUM
 ;
 
 %%
-

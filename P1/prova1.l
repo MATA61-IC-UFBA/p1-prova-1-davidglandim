@@ -16,13 +16,13 @@ LETRA           [a-zA-Z]
 DECIMAL         {DIGITO}+
 REAL            {DECIMAL}"."{DECIMAL}
 ID              {LETRA}({LETRA}|{DIGITO}|"_")*
-STRING          \"({LETRA}|{DIGITO})*\"
+STRING          \"[^\"]*\"
 
 %%
 
-[ \t]+ ;
+[ \t\n]+        ;
 
-"//".*          {}
+"//".* {}
 
 "concat"        {return CONCATT;}
 "length"        {return LENGTHT;}
@@ -33,14 +33,14 @@ STRING          \"({LETRA}|{DIGITO})*\"
 {ID}            {return IDT;}
 {STRING}        {return STRINGT;}
 
+","             {return ',';}
 "+"             {return PLUS;}
 "-"             {return MINUS;}
 "*"             {return TIMES;}
 "/"             {return DIV;}
-"("		        {return ABREP;}	
-")"		        {return FECHAP;}
+"("             {return ABREP;}	
+")"             {return FECHAP;}
 "="             {return ATRIBUICAO;}
-\n              {return EOL;}
 .               {return ERROR;}
 
 %%

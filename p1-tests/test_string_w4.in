@@ -1,0 +1,13 @@
+// test_string
+
+nome = "Joao"
+
+sobrenome = "Silva"
+
+length(nome)
+length())
+nome_completo = concat(nome, " ", sobrenome)
+
+print(nome_completo)
+
+

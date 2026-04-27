@@ -1,0 +1,13 @@
+// test_string_len
+
+nome = "Joao"
+
+sobrenome = "Silva"
+
+nome_completo = concat(nome, " ", sobrenome)
+
+tam = length(nome_completo)
+
+print(nome_completo, "tamanho: ", tam)
+
+
