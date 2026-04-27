@@ -16,7 +16,7 @@ LETRA           [a-zA-Z]
 DECIMAL         {DIGITO}+
 REAL            {DECIMAL}"."{DECIMAL}
 ID              {LETRA}({LETRA}|{DIGITO}|"_")*
-STRING          """({LETRA}|{DIGITO})+"""
+STRING          \"({LETRA}|{DIGITO})*\"
 
 %%
 
