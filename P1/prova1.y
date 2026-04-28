@@ -53,13 +53,17 @@ exprlist
 | expr
 ;
 
+exprlist_multi
+: exprlist_multi ',' expr
+| expr ',' expr
+
 expr
 : expr PLUS expr
 | expr MINUS expr
 | expr TIMES expr
 | expr DIV expr
 | ABREP expr FECHAP
-| CONCATT ABREP exprlist FECHAP
+| CONCATT ABREP exprlist_multi FECHAP
 | LENGTHT ABREP expr FECHAP
 | STRINGT
 | IDT
